@@ -1,3 +1,5 @@
 # PodMod
 Just mod for RimWorld
-for install mod just drop in mods folder
+For install mod just drop in mods folder
+
+Best for playing on crazy Random Randi)
