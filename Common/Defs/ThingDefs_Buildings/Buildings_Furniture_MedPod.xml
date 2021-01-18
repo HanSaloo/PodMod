@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="FurnitureBase" Name="MedPodBedBase" Abstract="True">
+		<thingClass>MedPod.Building_BedMedPod</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<selectable>true</selectable>
+		<building>
+			<soundDispense>MedPod_Running</soundDispense>
+		</building>
+		<statBases>
+			<MedicalTendQualityOffset>0.101</MedicalTendQualityOffset>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_AssignableToPawn">
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>CompAssignableToPawn_Bed</compClass>
+			</li>
+			<li Class="MedPod.CompProperties_TreatmentRestrictions">
+				<alwaysTreatableHediffs>
+					<li>AlcoholHigh</li>					
+					<li>Anesthetic</li>
+					<li>MedPod_InducedComa</li>
+				</alwaysTreatableHediffs>
+				<neverTreatableHediffs />
+				<disallowedRaces />
+			</li>
+		</comps>
+		<tickerType>Normal</tickerType>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<canOverlapZones>false</canOverlapZones>
+		<passability>PassThroughOnly</passability>
+		<defaultPlacingRot>South</defaultPlacingRot>
+	</ThingDef>
+
+	<!-- ========== Invisible Blocker, which adds a high pathCost to the main machinery part of the MedPod, and is dynamically spawned/despawned with the MedPod itself ========== -->
+
+	<ThingDef>
+		<defName>MedPodInvisibleBlocker</defName>
+		<label>Invisible Blocker</label>
+		<thingClass>Building</thingClass>
+		<category>Mote</category>
+		<graphicData>
+			<texPath>Things/Building/InvisibleTexture</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<size>(3,1)</size>
+		<selectable>false</selectable>
+		<canOverlapZones>false</canOverlapZones>
+		<passability>PassThroughOnly</passability>
+		<pathCost>200</pathCost>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<menuHidden>true</menuHidden>
+		<building>
+			<isInert>true</isInert>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+	</ThingDef>
+
+	<!-- ========== Standard MedPod ========== -->
+
+	<ThingDef ParentName="MedPodBedBase">
+		<defName>MedPodStandard</defName>
+		<label>MedPod</label>
+		<description>An advanced hospital bed that uses atomic cellular regeneration to treat nearly all kinds of injuries and diseases, including regenerating missing organs and limbs.\n\nThis is a standard model frequently found in free public health clinics on Glitterworlds.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/MedPod_Standard/MedPod_Standard</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,5)</drawSize>
+			<damageData>
+				<rectN>(1,0,1,3)</rectN>
+				<rectE>(0,1,3,1)</rectE>
+				<rectS>(1,0,1,3)</rectS>
+				<rectW>(0,1,3,1)</rectW>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+			</damageData>
+			<shadowData>
+				<volume>(1,0.7,3)</volume>
+				<offset>(0,0,0)</offset>
+			</shadowData>
+		</graphicData>
+		<uiIconPath>UI/MedPod_Standard</uiIconPath>
+		<castEdgeShadows>false</castEdgeShadows>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToBuild>2800</WorkToBuild>
+			<Mass>35</Mass>
+			<Flammability>1.0</Flammability>
+			<BedRestEffectiveness>1</BedRestEffectiveness>
+			<Comfort>0.80</Comfort>
+		</statBases>
+		<constructEffect>ConstructMetal</constructEffect>
+		<size>(3,3)</size>
+		<costList>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<ComponentSpacer>4</ComponentSpacer>
+			<IsolinearProcessor>1</IsolinearProcessor>
+			<Plasteel>160</Plasteel>
+			<Steel>80</Steel>
+		</costList>
+		<building>
+			<bed_showSleeperBody>true</bed_showSleeperBody>
+			<bed_defaultMedical>true</bed_defaultMedical>
+		</building>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>125</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="MedPod.CompProperties_AnimatedGantry">
+				<gantryGraphicData>
+					<texPath>Things/Building/Furniture/MedPod_Standard/MedPod_Standard_gantry</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<shaderType>CutoutComplex</shaderType>
+					<drawSize>(3, 3)</drawSize>
+				</gantryGraphicData>
+				<machineLidGraphicData>
+					<texPath>Things/Building/Furniture/MedPod_Standard/MedPod_Standard_machineLid</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<shaderType>CutoutComplex</shaderType>
+					<drawSize>(3, 2)</drawSize>
+					<drawOffset>(0, 0, -1)</drawOffset>
+				</machineLidGraphicData>
+			</li>
+			<li Class="MedPod.CompProperties_MedPodSettings">
+				<!-- Use default values -->
+			</li>
+		</comps>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>60</pathCost>
+		<leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+		<canOverlapZones>false</canOverlapZones>
+		<researchPrerequisites>
+			<li>AtomicCellularRegeneration</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+		<techLevel>Spacer</techLevel>
+		<uiIconScale>1.00</uiIconScale>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<MedPod_InspectorStatus_NoPower>Error: No power</MedPod_InspectorStatus_NoPower>
+
+	<MedPod_InspectorStatus_DiagnosisProgress>Diagnosing ({0}%)</MedPod_InspectorStatus_DiagnosisProgress>
+
+	<MedPod_InspectorStatus_DiagnosisComplete>Diagnosis Complete</MedPod_InspectorStatus_DiagnosisComplete>
+
+	<MedPod_InspectorStatus_HealingProgress>Reatomizing ({0}%)</MedPod_InspectorStatus_HealingProgress>
+
+	<MedPod_InspectorStatus_PatientDischarged>100% Clear</MedPod_InspectorStatus_PatientDischarged>
+
+	<MedPod_InspectorStatus_Idle>Idle</MedPod_InspectorStatus_Idle>
+
+	<MedPod_Stat_PowerConsumptionDiagnosis_Label>Power consumption (Diagnosis)</MedPod_Stat_PowerConsumptionDiagnosis_Label>
+
+	<MedPod_Stat_PowerConsumptionDiagnosis_Desc>The amount of power this MedPod will draw from the power grid while operating in Diagnosis mode.</MedPod_Stat_PowerConsumptionDiagnosis_Desc>
+
+	<MedPod_Stat_PowerConsumptionHealing_Label>Power consumption (Treatment)</MedPod_Stat_PowerConsumptionHealing_Label>
+
+	<MedPod_Stat_PowerConsumptionHealing_Desc>The amount of power this MedPod will draw from the power grid while operating in Treatment mode.</MedPod_Stat_PowerConsumptionHealing_Desc>
+
+	<MedPod_Stat_DiagnosisTime_Label>Diagnosis time</MedPod_Stat_DiagnosisTime_Label>
+
+	<MedPod_Stat_DiagnosisTime_Desc>How long it takes for this MedPod to diagnose a patient.</MedPod_Stat_DiagnosisTime_Desc>
+
+	<MedPod_Stat_PerHediffHealingTime_Label>Avg.  per-condition treatment time</MedPod_Stat_PerHediffHealingTime_Label>
+
+	<MedPod_Stat_PerHediffHealingTime_Desc>How long it takes (on average) for this MedPod to treat each medical condition on a patient.\n\nNote that this is scaled according to the severity of the condition - for instance, less severe injuries will take less time to treat.</MedPod_Stat_PerHediffHealingTime_Desc>
+
+	<MedPod_Stat_TimeSeconds>{0} s</MedPod_Stat_TimeSeconds>
+
+	<MedPod_Message_TreatmentComplete>MedPod treatment complete for {1_label}.</MedPod_Message_TreatmentComplete>
+
+	<MedPod_Message_TreatmentInterrupted>MedPod treatment interrupted for {1_label}.</MedPod_Message_TreatmentInterrupted>
+
+	<MedPod_FloatMenu_RaceNotAllowed>MedPod cannot treat {0}s</MedPod_FloatMenu_RaceNotAllowed>
+
+	<MedPod_FloatMenu_Unpowered>MedPod not powered</MedPod_FloatMenu_Unpowered>
+
+	<MedPod_SurgeryProhibited_PatientUsingMedPod>patient using MedPod</MedPod_SurgeryProhibited_PatientUsingMedPod>
+
+	<MedPod_CommandGizmoDisabled_MedPodInUse>{0} is in use.</MedPod_CommandGizmoDisabled_MedPodInUse>
+
+	//TODO make other langs
+
+</LanguageData>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <MedPod_InspectorStatus_NoPower>Помилка: немає енергії</MedPod_InspectorStatus_NoPower>
+
+    <MedPod_InspectorStatus_DiagnosisProgress>Діагнозтика ({0}%)</MedPod_InspectorStatus_DiagnosisProgress>
+
+    <MedPod_InspectorStatus_DiagnosisComplete>Діагнозтику завершено</MedPod_InspectorStatus_DiagnosisComplete>
+
+    <MedPod_InspectorStatus_HealingProgress>Реатомізація ({0}%)</MedPod_InspectorStatus_HealingProgress>
+
+    <MedPod_InspectorStatus_PatientDischarged>100% Чисто</MedPod_InspectorStatus_PatientDischarged>
+
+    <MedPod_InspectorStatus_Idle>Бездіяльність.</MedPod_InspectorStatus_Idle>
+
+    <MedPod_Stat_PowerConsumptionDiagnosis_Label>Споживання енергії (діагностика)</MedPod_Stat_PowerConsumptionDiagnosis_Label>
+
+    <MedPod_Stat_PowerConsumptionDiagnosis_Desc>Кількість енергії, яку цей MedPod буде отримувати від електромережі під час роботи в режимі діагностики.</MedPod_Stat_PowerConsumptionDiagnosis_Desc>
+
+    <MedPod_Stat_PowerConsumptionHealing_Label>Споживання енергії (лікування)</MedPod_Stat_PowerConsumptionHealing_Label>
+
+    <MedPod_Stat_PowerConsumptionHealing_Desc>Кількість енергії, яку цей MedPod буде отримувати від електромережі під час роботи в режимі лікування.</MedPod_Stat_PowerConsumptionHealing_Desc>
+
+    <MedPod_Stat_DiagnosisTime_Label>Час діагностики</MedPod_Stat_DiagnosisTime_Label>
+
+    <MedPod_Stat_DiagnosisTime_Desc>Скільки часу потрібно цьому MedPod для діагностики пацієнта.</MedPod_Stat_DiagnosisTime_Desc>
+
+    <MedPod_Stat_PerHediffHealingTime_Label>Середній час лікування за умовою</MedPod_Stat_PerHediffHealingTime_Label>
+
+    <MedPod_Stat_PerHediffHealingTime_Desc>Скільки часу (в середньому) займає цей MedPod для лікування кожного захворювання у пацієнта. \n\nЗверніть увагу, що це масштабується залежно від тяжкості стану - наприклад, для лікування менш важких травм потрібно менше часу.</MedPod_Stat_PerHediffHealingTime_Desc>
+
+    <MedPod_Stat_TimeSeconds>{0} cекунд</MedPod_Stat_TimeSeconds>
+
+    <MedPod_Message_TreatmentComplete>Лікування MedPod завершено для {1_label}.</MedPod_Message_TreatmentComplete>
+
+    <MedPod_Message_TreatmentInterrupted>Лікування MedPod перервано на {1_label}.</MedPod_Message_TreatmentInterrupted>
+
+    <MedPod_FloatMenu_RaceNotAllowed>MedPod не може лікувати {0}c</MedPod_FloatMenu_RaceNotAllowed>
+
+    <MedPod_FloatMenu_Unpowered>MedPod неає живлення</MedPod_FloatMenu_Unpowered>
+
+    <MedPod_SurgeryProhibited_PatientUsingMedPod>пацієнт, який користується MedPod</MedPod_SurgeryProhibited_PatientUsingMedPod>
+
+    <MedPod_CommandGizmoDisabled_MedPodInUse>{0} у використанні.</MedPod_CommandGizmoDisabled_MedPodInUse>
+
+</LanguageData>
